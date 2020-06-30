@@ -21,4 +21,4 @@ Simple tabletop RPG management system and online playing made in [rust](https://
 - **Jonatan**: General program ideas
 
 ## Discord Server
-[Join us at discord :D](https://discord.gg/vEWaqhW)
+[![SFRPG Discord Server](https://discordapp.com/api/guilds/727556773267112016/widget.png?style=banner3)](https://discord.gg/vEWaqhW)
