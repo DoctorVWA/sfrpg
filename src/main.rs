@@ -1,9 +1,9 @@
 #![windows_subsystem = "windows"]
-use druid::{AppLauncher, WindowDesc};
-use windows::room::Room;
-
 mod core;
-mod windows;
+
+use druid::{AppLauncher, WindowDesc};
+use dnd::windows::Room;
+
 
 fn main() {
     let mut default_game = Room::default();

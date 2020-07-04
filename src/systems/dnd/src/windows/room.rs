@@ -4,22 +4,14 @@ use druid::lens::LensExt;
 use druid::widget::{Align, Button, Flex, Label, SizedBox, TextBox, List, Scroll};
 use druid::{Data, Lens, Widget, WidgetExt};
 
-#[derive(Clone, Data, Lens)]
-pub struct Player {
-
-}
-
-#[derive(Clone, Data, Lens)]
-pub struct Master {
-
-}
 
 #[derive(Clone, Data, Lens)]
 pub struct Room {
     pub url: String,
+    pub name: String,
     pub player: Player,
     pub master: Option<Master>,
-    pub players: Vector<String>,
+    pub players: Vector<Player>,
     pub messages: Vector<String>,
     pub characters: Vector<String>,
 }
@@ -27,9 +19,9 @@ pub struct Room {
 impl Default for Room {
     fn default() -> Room {
         Room {
-            url: String::from(""),
-            player: Player {},
             master: None,
+            url: String::from(""),
+            player: Player::default(),
             players: Vector::new(),
             messages: Vector::new(),
             characters: Vector::new(),
@@ -62,3 +54,4 @@ impl Room {
         Flex::column()
     }
 }
+
