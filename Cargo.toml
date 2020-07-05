@@ -8,8 +8,8 @@ edition = "2018"
 git = "https://github.com/xi-editor/druid.git"
 features = ["im"]
 
-[dependencies.dnd]
-path = "./systems/dnd"
+[dependencies.dnd5e]
+path = "./systems/dnd5e"
 
 [dependencies.ct]
 path = "./systems/ct"

@@ -2,7 +2,7 @@
 mod core;
 
 use druid::{AppLauncher, WindowDesc};
-use dnd::windows::Room;
+use dnd5e::windows::Room;
 
 
 fn main() {

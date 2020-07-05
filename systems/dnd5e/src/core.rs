@@ -2,14 +2,14 @@ use druid::im::Vector;
 use druid::{Data, Lens, Widget, WidgetExt};
 
 #[derive(Clone, Data, Lens)]
-pub struct Races {
+pub struct Race {
     
 }
 
 #[derive(Clone, Data, Lens)]
 pub struct Character {
     pub name: String,
-    pub race: Races
+    pub race: Race
 }
 
 #[derive(Clone, Data, Lens)]

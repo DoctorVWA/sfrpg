@@ -1,5 +1,5 @@
 [package]
-name = "dnd"
+name = "dnd5e"
 version = "0.1.0"
 authors = ["DoctorVWA"]
 edition = "2018"
