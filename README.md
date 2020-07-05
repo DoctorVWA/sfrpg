@@ -2,7 +2,7 @@
 Simple tabletop RPG management system and online playing made in [rust](https://github.com/rust-lang) and [druid](https://github.com/linebender/druid).
 
 ## License information
-In the present time, this repository uses and distributes [DnD 5e SRD](/systems/dnd/SRD), under the [Open Gaming License 1.0a](/DND-SRD5-LICENSE).
+In the present time, this repository uses and distributes [DnD 5e SRD](/systems/dnd5e/SRD), under the [Open Gaming License 1.0a](/DND-SRD5-LICENSE).
 
 ## Features
 - [ ] Discord implementation
