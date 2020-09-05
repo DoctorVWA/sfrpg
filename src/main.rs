@@ -13,6 +13,7 @@ fn main() {
         .window_size((800., 600.))
         .with_min_size((800., 600.));
 
+    default_game.messages = (0..=20).map(|n| n.to_string()).collect();
+
     AppLauncher::with_window(main_window).launch(default_game).expect("launch failed");
 }
-

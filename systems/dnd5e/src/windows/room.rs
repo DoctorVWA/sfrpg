@@ -1,8 +1,8 @@
 use druid::piet::Color;
 use druid::im::Vector;
 use druid::lens::LensExt;
-use druid::widget::{Align, Button, Flex, Label, SizedBox, TextBox, List, Scroll};
-use druid::{Data, Lens, Widget, WidgetExt};
+use druid::widget::{Align, Button, Flex, Label, SizedBox, TextBox, List, Scroll, CrossAxisAlignment};
+use druid::{Data, Lens, Widget, WidgetExt, UnitPoint};
 
 use crate::core::{
     Player, Master
@@ -39,11 +39,11 @@ impl Room {
         let chat_box = SizedBox::new(Room::chat_box())
             .border(Color::WHITE, 1.0)
             .fix_width(300.0)
-            .fix_height(600.0);
+            .fix_height(200.0);
         let action_box = SizedBox::new(Room::action_box())
             .border(Color::WHITE, 1.0)
             .fix_width(300.0)
-            .fix_height(600.0);
+            .fix_height(200.0);
 
         let layout = Flex::row()
             .with_child(chat_box)
@@ -53,7 +53,22 @@ impl Room {
         Align::centered(layout)
     }
     fn chat_box() -> impl Widget<Room> {
-        Flex::column()
+        let mut list = Flex::row().cross_axis_alignment(CrossAxisAlignment::Start);
+
+        list.add_flex_child(
+            Scroll::new(List::new(|| {
+                Label::new(|item: &String, _env: &_| format!("{}", item))
+                    .align_vertical(UnitPoint::TOP_LEFT)
+                    .padding(10.0)
+                    .expand()
+                    .height(30.0)
+            }))
+            .vertical()
+            .lens(Room::messages),
+            1.0
+        );
+
+        list
     }
     fn action_box() -> impl Widget<Room> {
         Flex::column()
