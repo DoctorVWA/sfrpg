@@ -1,5 +1,5 @@
 use druid::im::Vector;
-use druid::{Data, Lens, Widget, WidgetExt};
+use druid::{Data, Lens};
 
 #[derive(Clone, Data, Lens)]
 pub struct Race {

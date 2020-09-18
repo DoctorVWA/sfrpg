@@ -2,7 +2,7 @@
 mod core;
 
 use druid::{AppLauncher, WindowDesc};
-use dnd5e::windows::Room;
+use dnd5e::windows::{Room, Message};
 
 
 fn main() {
@@ -13,7 +13,11 @@ fn main() {
         .window_size((800., 600.))
         .with_min_size((800., 600.));
 
-    default_game.messages = (0..=20).map(|n| n.to_string()).collect();
+    default_game.messages = (0..=20).map(|n| Message {
+        author: "Joãozin".to_string(),
+        content: n.to_string(),
+        date: "10/09/2020 23:23".to_string()
+    }).collect();
 
     AppLauncher::with_window(main_window).launch(default_game).expect("launch failed");
 }
