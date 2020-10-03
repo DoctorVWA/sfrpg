@@ -2,22 +2,16 @@
 mod core;
 
 use druid::{AppLauncher, WindowDesc};
-use dnd5e::windows::{Room, Message};
+use dnd5e::windows::{Login, Room, Message};
 
 
 fn main() {
-    let mut default_game = Room::default();
+    let default_login = Login::default();
 
-    let main_window = WindowDesc::new(Room::builder)
-        .title("SFRPG")
-        .window_size((800., 600.))
-        .with_min_size((800., 600.));
+    let main_window = WindowDesc::new(Login::builder)
+        .title("SFRPG - D&D - Login")
+        .window_size((250., 300.))
+        .resizable(false);
 
-    default_game.messages = (0..=20).map(|n| Message {
-        author: "Joãozin".to_string(),
-        content: n.to_string(),
-        date: "10/09/2020 23:23".to_string()
-    }).collect();
-
-    AppLauncher::with_window(main_window).launch(default_game).expect("launch failed");
+    AppLauncher::with_window(main_window).launch(default_login).expect("launch failed");
 }
