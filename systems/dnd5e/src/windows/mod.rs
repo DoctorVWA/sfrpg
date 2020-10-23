@@ -1,10 +1,8 @@
-pub mod room;
-pub mod login;
-pub mod character;
+mod room;
+mod login;
+mod character;
 
-pub use self::{
-    room::Room,
-    room::Message,
-    login::Login,
-    character::Character
-};
+pub use room::Room;
+pub use room::Message;
+pub use login::Login;
+pub use character::Character;
