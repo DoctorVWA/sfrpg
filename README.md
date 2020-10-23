@@ -24,4 +24,4 @@ In the present time, this repository uses and distributes [DnD 5e SRD](/systems/
 - **Jonatan**: General program ideas
 
 ## Discord Server
-[![SFRPG Discord Server](https://discordapp.com/api/guilds/727556773267112016/widget.png?style=banner3)](https://discord.gg/vEWaqhW)
+Not yet
